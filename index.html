@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>PTO Balance Calculator</title>
   <style>
     :root {
@@ -297,6 +297,104 @@
       .ledger-row { grid-template-columns: 1fr; }
       .ledger-head { display: grid; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 2; }
     }
+  
+    @media (max-width: 900px) {
+      .wrap {
+        max-width: 100%;
+        padding: 14px 10px 28px;
+      }
+      .hero {
+        padding: 18px;
+        border-radius: 22px;
+      }
+      .hero h1 {
+        font-size: 28px;
+        line-height: 1.08;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .card {
+        padding: 16px;
+        border-radius: 22px;
+      }
+      .form-grid,
+      .toolbar {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      input, select, button {
+        font-size: 16px;
+        min-height: 48px;
+      }
+      .calendar-shell {
+        max-width: 100%;
+      }
+      .calendar-header {
+        grid-template-columns: 42px 1fr 42px;
+        gap: 8px;
+      }
+      .calendar-title {
+        font-size: 15px;
+      }
+      .calendar-grid {
+        gap: 5px;
+      }
+      .weekday {
+        font-size: 10px;
+      }
+      .day {
+        max-height: 52px;
+        min-height: 46px;
+        border-radius: 14px;
+        padding: 5px;
+        font-size: 11px;
+      }
+      .day-num {
+        font-size: 12px;
+      }
+      .day-tag {
+        font-size: 8px;
+        bottom: 3px;
+        right: 4px;
+      }
+      .selected-list {
+        max-width: 100%;
+      }
+      .selected-item {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 7px;
+      }
+      .mini-grid {
+        gap: 10px;
+      }
+      .mini-card {
+        padding: 12px;
+        border-radius: 18px;
+      }
+      .mini-card .v {
+        font-size: 24px;
+      }
+      .line-items li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .ledger {
+        max-height: 420px;
+      }
+      .ledger-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 8px 0;
+      }
+      .ledger-head {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
